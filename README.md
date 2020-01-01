@@ -4,3 +4,6 @@ reading book and coding
 
 #### chap1
 > js基础
+
+#### chap2
+> ES6语法
