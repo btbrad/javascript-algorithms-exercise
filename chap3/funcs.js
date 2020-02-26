@@ -52,5 +52,73 @@ for (const n of numbers) {
 }
 
 /**
- * 
+ *  @@iterator
  */
+let iterator = numbers[Symbol.iterator]()
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+// console.log(iterator.next().value)
+for (const n of iterator) {
+  console.log('iterator', n)
+}
+
+/**
+ * entries
+ */
+let aEntries = numbers.entries() 
+for (const n of aEntries) {
+  console.log('entries', n)
+}
+
+/**
+ * keys
+ */
+const aKeys = numbers.keys()
+for (const n of aKeys) {
+  console.log(aKeys.next())
+  console.log('aKeys', n)
+}
+
+/**
+ * from
+ */
+let numbers2 = Array.from(numbers)
+console.log('from', numbers2)
+let evens = Array.from(numbers, x => x % 2 == 0)
+console.log('from', evens)
+
+/**
+ * Array.of
+ */
+let numbers3 = Array.of(1, 2, 3, 4, 5)
+console.log('Array.of', numbers3)
+
+/**
+ * fill
+ */
+let numbersCopy = Array.of(1, 2, 3, 4, 5, 6)
+// console.log(numbersCopy.fill(0))
+// console.log(numbersCopy.fill(0, 2))
+console.log(numbersCopy.fill(0, 2, 4))
+
+/**
+ * copyWithin
+ */
+let copyArray = [1, 2, 3, 4, 5, 6]
+copyArray.copyWithin(0, 4)
+console.log('copyWithin', copyArray)
+copyArray = [1, 2, 3, 4, 5, 6]
+copyArray.copyWithin(2,4,5)
+console.log(copyArray)
