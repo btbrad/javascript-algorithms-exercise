@@ -122,3 +122,77 @@ console.log('copyWithin', copyArray)
 copyArray = [1, 2, 3, 4, 5, 6]
 copyArray.copyWithin(2,4,5)
 console.log(copyArray)
+
+/**
+ * reverse
+ */
+console.log('reverse', numbers.reverse())
+
+/**
+ * sort
+ */
+console.log('sort', numbers.sort())
+console.log('sort', numbers.sort((a, b) => a - b))
+console.log('sort', numbers.sort((a, b)=>{
+  if (a > b) {
+    return 1
+  }
+  if (a < b) {
+    return -1
+  }
+  if (a === b) {
+    return 0
+  }
+}))
+
+let persons = [
+  {name: 'John', age: 20},
+  {name: 'Mike', age: 23},
+  {name: 'William', age: 30}
+]
+
+const compareFunction = (a, b) => {
+  if (a.age < b.age) {
+    return -1
+  }
+  if (a.age > b.age) {
+    return 1
+  }
+  if (a.age === b.age) {
+    return 0
+  }
+}
+console.log(persons.sort(compareFunction).map(p => `${p.name}(${p.age})`).join(','))
+
+/**
+ * indexOf 和 lastIndexOf
+ */
+console.log('indexOf', numbers.indexOf(10))
+console.log('indexOf', numbers.indexOf(100))
+
+let numbers22 = Array.from(numbers)
+numbers22.push(10)
+console.log('lastIndexOf', numbers22.lastIndexOf(10))
+console.log('lastIndexOf', numbers22.lastIndexOf(100))
+
+/**
+ * find  findIndex
+ */
+function find13(num) {
+  return num % 13 === 0
+}
+console.log('find', numbers.find(num => find13(num)))
+console.log('findIndex', numbers.findIndex(num => find13(num)))
+
+/**
+ * includes
+ */
+console.log('includes', numbers.includes(13))
+console.log('includes', numbers.includes(130))
+console.log('includes', numbers.includes(7,4))
+
+/**
+ * toString join
+ */
+console.log('toString', numbers.toString())
+console.log('join', numbers.join('--').split('--').join())
