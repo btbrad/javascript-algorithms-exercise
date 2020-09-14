@@ -7,3 +7,6 @@ reading book and coding
 
 #### chap2
 > ES6语法
+
+#### chap3
+> 数组
