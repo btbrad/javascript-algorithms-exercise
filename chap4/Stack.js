@@ -48,7 +48,7 @@ class Stack {
     if (this.isEmpty()) {
       return undefined
     }
-    return this,items[this.count - 1]
+    return this.items[this.count - 1]
   }
 
   /**
@@ -73,3 +73,5 @@ class Stack {
     return objString
   }
 }
+
+module.exports = Stack
