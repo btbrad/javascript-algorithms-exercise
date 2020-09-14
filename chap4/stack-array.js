@@ -46,3 +46,5 @@ class Stack {
     return this.items.length
   }
 }
+
+module.exports =  Stack
