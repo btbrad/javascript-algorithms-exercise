@@ -51,7 +51,6 @@ class Queue {
     let objString = `${this.items[this.lowestCount]}`
     for (let i = this.lowestCount + 1; i < this.count; i++) {
       objString += `,${this.items[i]}`
-      console.log(123, i)
     }
     return objString
   }
