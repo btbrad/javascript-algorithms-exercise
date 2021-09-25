@@ -1,0 +1,20 @@
+{
+  "name": "javascript-algorithms-exercise",
+  "version": "1.0.0",
+  "description": "reading book and coding",
+  "main": "util.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/btbrad/javascript-algorithms-exercise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/btbrad/javascript-algorithms-exercise/issues"
+  },
+  "homepage": "https://github.com/btbrad/javascript-algorithms-exercise#readme"
+}

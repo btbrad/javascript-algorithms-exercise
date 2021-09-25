@@ -12,10 +12,8 @@ export default class LinkedList {
   push(element) {
     const node = new Node(element)
     if (this.head === null || this.head === undefined) {
-      console.log('empty')
       this.head = node
     } else {
-      console.log('not empty')
       let current = this.head
       while (current.next !== null && current.next !== undefined) {
         current = current.next
