@@ -1,6 +1,10 @@
 # javascript-algorithms-exercise
 reading book and coding
 
+### 运行
+```shell
+parcel index.html
+```
 
 #### chap1
 > js基础
