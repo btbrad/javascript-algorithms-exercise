@@ -17,3 +17,6 @@ parcel index.html
 
 #### chap4
 > 栈
+
+#### chap5
+> 队列
