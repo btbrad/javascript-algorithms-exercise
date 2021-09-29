@@ -22,4 +22,27 @@ export default class LinkedList {
     }
     this.count++
   }
+
+  // 从链表中移除元素
+  removeAt(index) {
+    // 检查越界值
+    if (index >= 0 && index < this.count) {
+      let current = this.head
+
+      if (index === 0) {
+        // 移除第一项
+        this.head = current.next
+      } else {
+        let previous = null
+        for (let i = 0; i < index; i++) {
+          previous = current
+          current = current.next
+        }
+        previous.next = current.next
+      }
+      this.count--
+      return current.element
+    }
+    return undefined
+  }
 }
