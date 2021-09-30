@@ -20,3 +20,6 @@ parcel index.html
 
 #### chap5
 > 队列
+
+#### chap6
+> 链表
