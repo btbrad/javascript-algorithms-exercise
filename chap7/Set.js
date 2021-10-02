@@ -54,4 +54,58 @@ export default class Set {
     }
     return values
   }
+
+  // 并集
+  union(otherSet) {
+    const unionSet = new Set()
+    this.values().forEach((value) => unionSet.add(value))
+    otherSet.values().forEach((value) => unionSet.add(value))
+    return unionSet
+  }
+
+  // 交集
+  intersection(otherSet) {
+    const intersection = new Set()
+    const values = this.values()
+    const otherValues = otherSet.values()
+    let biggerSet = values
+    let smallerSet = otherValues
+    if (biggerSet.length < smallerSet.length) {
+      biggerSet = otherValues
+      smallerSet = values
+    }
+    smallerSet.forEach((value) => {
+      if (biggerSet.includes(value)) {
+        intersection.add(value)
+      }
+    })
+    return intersection
+  }
+
+  // 差集
+  difference(otherSet) {
+    const differenceSet = new Set()
+    this.values().forEach((value) => {
+      if (!otherSet.has(value)) {
+        differenceSet.add(value)
+      }
+    })
+    return differenceSet
+  }
+
+  // 子集
+  isSubsetOf(otherSet) {
+    if (this.size() > otherSet.size()) {
+      return false
+    }
+    let isSubset = true
+    this.values().every((value) => {
+      if (!otherSet.has(value)) {
+        isSubset = false
+        return false
+      }
+      return true
+    })
+    return isSubset
+  }
 }
