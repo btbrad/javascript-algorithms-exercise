@@ -26,3 +26,6 @@ parcel index.html
 
 #### chap7
 > 集合
+
+#### chap8
+> 字典和散列表
