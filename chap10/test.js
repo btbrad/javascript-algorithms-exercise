@@ -10,3 +10,5 @@ searchTree.insert(18)
 console.log(searchTree)
 
 searchTree.inOrderTraverse((k) => console.log(k))
+searchTree.preOrderTraverse((k) => console.log(k))
+searchTree.postOrderTraverse((k) => console.log(k))

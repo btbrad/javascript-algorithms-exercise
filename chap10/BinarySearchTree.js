@@ -43,4 +43,30 @@ export default class BinarySearchTree {
       this.inOrderTraverseNode(node.right, callback)
     }
   }
+
+  // 先序遍历
+  preOrderTraverse(callback) {
+    this.preOrderTraverseNode(this.root, callback)
+  }
+
+  preOrderTraverseNode(node, callback) {
+    if (node != null) {
+      callback(node.key)
+      this.preOrderTraverseNode(node.left, callback)
+      this.preOrderTraverseNode(node.right, callback)
+    }
+  }
+
+  // 后序遍历
+  postOrderTraverse(callback) {
+    this.postOrderTraverseNode(this.root, callback)
+  }
+
+  postOrderTraverseNode(node, callback) {
+    if (node != null) {
+      this.postOrderTraverseNode(node.left, callback)
+      this.postOrderTraverseNode(node.right, callback)
+      callback(node.key)
+    }
+  }
 }
