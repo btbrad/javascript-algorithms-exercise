@@ -30,4 +30,17 @@ export default class BinarySearchTree {
       }
     }
   }
+
+  // 中序遍历
+  inOrderTraverse(callback) {
+    this.inOrderTraverseNode(this.root, callback)
+  }
+
+  inOrderTraverseNode(node, callback) {
+    if (node != null) {
+      this.inOrderTraverseNode(node.left, callback)
+      callback(node.key)
+      this.inOrderTraverseNode(node.right, callback)
+    }
+  }
 }

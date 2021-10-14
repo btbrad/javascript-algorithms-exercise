@@ -8,3 +8,5 @@ searchTree.insert(9)
 searchTree.insert(18)
 
 console.log(searchTree)
+
+searchTree.inOrderTraverse((k) => console.log(k))
