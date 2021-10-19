@@ -93,4 +93,21 @@ export default class BinarySearchTree {
     }
     return current
   }
+
+  // 搜索一个特定的值
+  search(key) {
+    return this.searchNode(this.root, key)
+  }
+  searchNode(node, key) {
+    if (node == null) {
+      return false
+    }
+    if (this.compareFn(key, node.key) === Compare.LESS_THAN) {
+      return this.searchNode(node.left, key)
+    } else if (this.compareFn(key, node.key) === Compare.BIGGER_THAN) {
+      return this.searchNode(node.right, key)
+    } else {
+      return true
+    }
+  }
 }
