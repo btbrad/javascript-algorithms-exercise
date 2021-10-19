@@ -69,4 +69,28 @@ export default class BinarySearchTree {
       callback(node.key)
     }
   }
+
+  // 搜索最小值
+  min() {
+    return this.minNode(this.root)
+  }
+  minNode(node) {
+    let current = node
+    while (current != null && current.left != null) {
+      current = current.left
+    }
+    return current
+  }
+
+  // 搜索最大值
+  max() {
+    return this.maxNode(this.root)
+  }
+  maxNode(node) {
+    let current = node
+    while (current != null && current.right != null) {
+      current = current.right
+    }
+    return current
+  }
 }
